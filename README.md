@@ -1,28 +1,38 @@
 # Anamoly_Detection_Using_Robust_Graphical_Lasso
 
+
 ## Project Overview
 This repository implements anomaly detection in high-dimensional datasets using **Robust Graphical Lasso (RGlasso)**. It extends the traditional Graphical Lasso by integrating **Robust Principal Component Analysis (RPCA)** for improved handling of outliers and sparse covariance estimation.
 
-Key features:
+### Key Features:
 - Combines RPCA and Graphical Lasso.
 - Detects anomalies while preserving sparse structures.
 - Optimized for both synthetic and real-world datasets.
+
+---
 
 ## Motivation
 Traditional methods like Graphical Lasso are sensitive to outliers, making them unsuitable for noisy data. RGlasso addresses this by:
 - Decomposing covariance matrices into clean and sparse components.
 - Handling noise effectively while maintaining computational efficiency.
 
-Applications include:
+### Applications:
 - **Finance**: Improved risk management and hedging.
 - **Healthcare**: Identifying rare complications in genomic or imaging data.
 - **Cybersecurity**: Detecting network anomalies and cyber threats.
 
+---
+
 ## Methodology
 The RGlasso model is formulated as:
-\[
-\text{minimize}_{\Theta \succ 0, F \succ 0, S} \, - \log |\Theta| + \text{tr}(F\Theta) + \rho \|\Theta\|_1 + \lambda \|S\|_1 \quad \text{subject to } M = F + S
-\]
+
+$$
+\text{minimize}_{\Theta \succ 0, F \succ 0, S} \, - \log |\Theta| + \text{tr}(F\Theta) + \rho \|\Theta\|_1 + \lambda \|S\|_1
+$$
+
+**Subject to:**  
+\( M = F + S \)
+
 Where:
 - \( \Theta \): Precision matrix.
 - \( F \): Clean covariance matrix.
@@ -30,6 +40,9 @@ Where:
 - \( M \): Observed covariance matrix.
 
 Optimization is solved using **Alternating Direction Method of Multipliers (ADMM)**.
+
+
+
 
 ## Repository Structure
 ```
