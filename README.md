@@ -69,11 +69,15 @@ Optimization is solved using **Alternating Direction Method of Multipliers (ADMM
 
 ## Getting Started
 1. Clone the repository:
-   ```bash
+ ```bash
    git clone https://github.com/Roshinigompa/Anamoly_Detection_Using_Robust_Graphical_Lasso.git
    ```
+2. Download the Datasets from drive
+   ```bash
+   https://drive.google.com/drive/folders/16_zIKynBS7cvg4Z2YL8dVQnIDmxLQOKQ?usp=sharing
+   ```
 
-2. Run the notebooks:
+3. Run the notebooks:
    - Synthetic Data: `Anamoly__detection_SD.ipynb`
    - Real-World Data: `Anamoly_Detection_RD_.ipynb`
 
